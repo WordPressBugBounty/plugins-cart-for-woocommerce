@@ -1,8 +1,8 @@
-=== Sliding WooCommerce Cart by FunnelKit – Skip Cart & Reach WooCommerce Checkout Faster ===
+=== Sliding Cart for WooCommerce by FunnelKit – Skip Cart & Reach WooCommerce Checkout Faster ===
 Contributors: xlplugins, amans2k
 Tags: WooCommerce Cart, Side Cart, Modern Cart, Floating Cart, WooCommerce Checkout
 Requires at least: 5.0
-Tested up to: 6.5.3
+Tested up to: 6.7.2
 Requires PHP: 7.0
 Stable tag: 1.7.1
 License: GPLv3
