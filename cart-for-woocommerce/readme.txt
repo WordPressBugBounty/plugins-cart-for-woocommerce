@@ -4,7 +4,7 @@ Tags: WooCommerce Cart, Side Cart, Modern Cart, Floating Cart, WooCommerce Check
 Requires at least: 5.0
 Tested up to: 6.8.1
 Requires PHP: 7.0
-Stable tag: 1.8.0
+Stable tag: 1.8.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -218,6 +218,19 @@ You can display coupon codes on the FunnelKit side cart or even auto-apply the c
 
 == Change log ==
 
+= 1.8.1 =
+* Added: Continue Shopping: Re-added the 'Continue Shopping link' setting. (#749)
+* Improved: Admin UI: Multiple visual and usability fixes in the admin panel. (#762, #763, #766, #784)
+* Improved: Germanized Plugin: Resolved CSS conflicts in the order summary block. (#744)
+* Improved: Mini Cart Icon: Improved compatibility and fixed inconsistent value updates. (#755)
+* Improved: Ajax Add to Cart: Code optimized for better performance and reliability. (#782)
+* Fixed: WooCommerce Subscriptions: Product price display issue resolved. (#745, #772)
+* Fixed: YITH Product Bundles: Compatibility re-added and confirmed working. (#752)
+* Fixed: WooCommerce Additional Fees Plugin: Fixed conflict causing incorrect fee behavior. (#746)
+* Fixed: Order Summary: Removed unnecessary background color setting. (#768)
+* Fixed: Polylang Compatibility: Fixed issue with language texts not rendering properly. (#770, #788)
+* Developer Updates: Filter Hook Update: Modified fkcart_enable_item_link hook for improved control. (#754)
+
 = 1.8.0 =
 * Added: Introduced compatibility with WooCommerce PayPal Payments for smart buttons. (#551)
 * Added: Enabled multiple header menu selections for the cart icon to enhance customization. (#610)
@@ -260,10 +273,10 @@ You can display coupon codes on the FunnelKit side cart or even auto-apply the c
 * Fixed: Improved cart quantity and total cookies to support SSL for better security. (#675)
 * Fixed: Enhanced price display in select options quick view for product variations. (#712)
 
-= 1.7.1
+= 1.7.1 =
 * Fixed: Variation product options weren't displaying in the side cart, fixed. (#543)
 
-= 1.7.0
+= 1.7.0 =
 * Compatible upto WordPress 6.5.3
 * Compatible upto WooCommerce 8.9.1
 * Added: Compatibility added with the 'WC bookings' plugin. Savings are not displaying for gift and booking product types. (#534)
@@ -277,7 +290,7 @@ You can display coupon codes on the FunnelKit side cart or even auto-apply the c
 * Dev: Action hook 'fkcart_after_item_meta' updated. (#531)
 * Dev: Filter hook 'fkcart_use_buit_in_cart_item_data_template' to support WooCommerce native cart item. (#521)
 
-= 1.6.0
+= 1.6.0 =
 * Compatible upto WordPress 6.5
 * Compatible upto WooCommerce 8.7
 * Compatible with Funnel Builder Pro 3.3
