@@ -72,6 +72,8 @@ do_action( 'fkcart_before_modal_container', $front );
 					}
 				}
 				?>
+
+				<?php do_action( 'fkcart_before_body', $front ); ?>
                 <!-- END: Reward -->
 
                 <!-- Body -->
@@ -90,6 +92,7 @@ do_action( 'fkcart_before_modal_container', $front );
 					<?php $is_style3_upsell_enabled && fkcart_get_template_part( 'cart/upsell-style3' ) ?>
                     <!-- END: Upsell Style -->
                 </div>
+				<?php do_action( 'fkcart_after_body', $front ); ?>
             </div>
             <!-- Slider Footer -->
             <div class="fkcart-slider-footer <?php echo esc_attr( $slider_footer_class ) ?>">

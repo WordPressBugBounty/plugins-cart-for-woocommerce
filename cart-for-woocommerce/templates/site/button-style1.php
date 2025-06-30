@@ -15,5 +15,5 @@ if ( isset( $floating_icon ) ) {
     <div class="fkcart-floating-icon">
 		<?php fkcart_get_template_part( 'icon/cart/' . $icon, '', [], true ) ?>
     </div>
-    <div class="fkcart-item-count" id="fkit-floating-count" data-item-count="<?php echo floatval( $cart_item_count ); ?>"><?php echo wp_kses_post( $cart_item_count ); ?></div>
+    <div class="fkcart-item-count" id="fkit-floating-count" data-item-count="<?php echo esc_attr( floatval( $cart_item_count ) ); ?>"><?php echo esc_html( $cart_item_count ); ?></div>
 </div>
