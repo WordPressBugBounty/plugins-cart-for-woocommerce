@@ -4,7 +4,7 @@ Tags: WooCommerce Cart, Side Cart, Modern Cart, Floating Cart, WooCommerce Check
 Requires at least: 5.0
 Tested up to: 6.8.1
 Requires PHP: 7.0
-Stable tag: 1.9.0
+Stable tag: 1.9.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -217,6 +217,13 @@ You can display coupon codes on the FunnelKit side cart or even auto-apply the c
 
 
 == Change log ==
+
+= 1.9.1 =
+* Added: Compatibility with the 'WPC Variations Radio Buttons' plugin. Disallow quick-edit product selections in the side cart. (#858)
+* Added: Support for displaying recurring prices for WooCommerce Subscriptions in the cart order summary. (#844)
+* Improved: Resolved RTL display issues in the coupon section. (#847)
+* Improved: Pro: Improved HTML and popup visibility for the Special Addon feature on mobile devices. (#852)
+* Fixed: Issue with floating cart icon setting visibility has been resolved. (#854)
 
 = 1.9.0 =
 * Coming Soon with Funnel Builder Pro 3.11.0

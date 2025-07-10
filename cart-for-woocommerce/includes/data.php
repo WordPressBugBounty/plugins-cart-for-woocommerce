@@ -384,6 +384,9 @@ if ( ! class_exists( '\FKCart\Includes\Data' ) ) {
 		public static function get_value( $key ) {
 			$settings = self::get_settings();
 			if ( isset( $settings[ $key ] ) ) {
+				if( 'special_addon_image_size' === $key && empty( $settings[ $key ] ) ) {
+					return 48; // Default size for special addon image
+				}
 				return maybe_unserialize( $settings[ $key ] );
 			}
 

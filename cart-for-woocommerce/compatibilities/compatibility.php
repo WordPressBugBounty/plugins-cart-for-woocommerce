@@ -37,6 +37,7 @@ if ( ! class_exists( '\FKCart\Compatibilities\Compatibility' ) ) {
 				'wcrewardpoints.php'                         => class_exists( '\WC_Points_Rewards' ),
 				'wcstripe.php'                               => function_exists( 'woocommerce_gateway_stripe' ),
 				'woocommerce-product-bundles.php'            => class_exists( '\WC_Bundles' ),
+				'woocommerceSubscriptionByWC.php'            => class_exists( '\WC_Subscriptions' ),
 				'woocs.php'                                  => class_exists( '\WOOCS' ),
 				'woomulticurrency.php'                       => defined( 'WOOMULTI_CURRENCY_F_VERSION' ) || defined( 'WOOMULTI_CURRENCY_VERSION' ),
 				'wooProductBundle.php'                       => defined( 'WOOSB_DIR' ),

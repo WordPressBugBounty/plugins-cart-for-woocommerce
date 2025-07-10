@@ -103,6 +103,8 @@ $shipping_tax_calculation_text = isset( $settings['shipping_tax_calculation_text
                 <div class="fkcart-summary-text fkcart-shipping-tax-calculation-text"><?php echo $shipping_tax_calculation_text ?></div>
             </div>
 		<?php } ?>
+
+		<?php do_action( 'fkcart_after_order_summary', $front ); ?>
         <div class="fkcart-text-light"></div>
     </div>
 </div>
