@@ -69,6 +69,7 @@ class DB {
 	    CREATE TABLE $fk_cart (
 	        id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 	        oid bigint(20) unsigned NOT NULL DEFAULT 0,
+	        onumber varchar(100) NOT NULL DEFAULT '',
 	        addon_viewed varchar(255) NOT NULL DEFAULT '',
 	        free_gift_viewed varchar(255) NOT NULL DEFAULT '',
 	        upsells_viewed varchar(255) NOT NULL DEFAULT '',
@@ -132,6 +133,7 @@ class DB {
 			'1.7.2' => '1_7_2',
 			'1.8.1' => '1_8_1',
 			'1.8.2' => '1_8_2',
+			'1.8.3' => '1_8_3',
 		);
 
 		$db_options = get_option( 'fkcart_db_options', [] );
@@ -261,6 +263,29 @@ class DB {
 		update_option( 'fkcart_settings', $data, false );
 
 
+		$this->update_db_version( $version_key );
+	}
+
+	/**
+	 * 1.8.3
+	 *
+	 * @param $version_key
+	 *
+	 * @return void
+	 */
+	protected function db_update_1_8_3( $version_key ) {
+		if ( in_array( '1.0.0', $this->db_version, true ) ) {
+			$this->update_db_version( $version_key );
+			return;
+		}
+		global $wpdb;
+		$table_name = $wpdb->prefix . 'fk_cart';
+		$column = $wpdb->get_results( $wpdb->prepare( "SHOW COLUMNS FROM `{$table_name}` LIKE %s", 'onumber' ) );
+		if ( empty( $column ) ) {
+			$wpdb->query( "ALTER TABLE `{$table_name}` ADD COLUMN `onumber` varchar(100) NOT NULL DEFAULT '' AFTER `oid`" );
+			$max_id = $wpdb->get_var( "SELECT COALESCE(MAX(id), 0) FROM {$table_name}" );
+			update_option( 'fkcart_order_maxid', $max_id );
+		}
 		$this->update_db_version( $version_key );
 	}
 }
