@@ -106,7 +106,7 @@ if ( ! class_exists( '\FKCart\Includes\Ajax' ) ) {
 			$product_id   = isset( $_POST['fkcart_product_id'] ) ? sanitize_text_field( wp_unslash( $_POST['fkcart_product_id'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Public WC AJAX endpoint, accessible to anonymous users
 			$variation_id = isset( $_POST['fkcart_variation_id'] ) ? sanitize_text_field( wp_unslash( $_POST['fkcart_variation_id'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Public WC AJAX endpoint
 			$quantity     = isset( $_POST['fkcart_quantity'] ) ? sanitize_text_field( wp_unslash( $_POST['fkcart_quantity'] ) ) : 1; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Public WC AJAX endpoint
-			$attributes   = isset( $_POST['attributes'] ) ? wc_clean( wp_unslash( $_POST['attributes'] ) ) : []; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Public WC AJAX endpoint
+			$attributes   = isset( $_POST['attributes'] ) ? wp_unslash( $_POST['attributes'] ) : []; // phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Public WC AJAX endpoint
 
 			$cart_item_key = isset( $_POST['fkcart-cart-key'] ) ? sanitize_text_field( wp_unslash( $_POST['fkcart-cart-key'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Public WC AJAX endpoint
 
@@ -192,7 +192,7 @@ if ( ! class_exists( '\FKCart\Includes\Ajax' ) ) {
 			$product_id    = isset( $_POST['fkcart_product_id'] ) ? sanitize_text_field( wp_unslash( $_POST['fkcart_product_id'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Public WC AJAX endpoint, accessible to anonymous users
 			$variation_id  = isset( $_POST['fkcart_variation_id'] ) ? sanitize_text_field( wp_unslash( $_POST['fkcart_variation_id'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Public WC AJAX endpoint
 			$quantity      = isset( $_POST['fkcart_quantity'] ) ? sanitize_text_field( wp_unslash( $_POST['fkcart_quantity'] ) ) : 1; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Public WC AJAX endpoint
-			$attributes    = isset( $_POST['attributes'] ) ? wc_clean( wp_unslash( $_POST['attributes'] ) ) : []; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Public WC AJAX endpoint
+			$attributes    = isset( $_POST['attributes'] ) ? wp_unslash( $_POST['attributes'] ) : []; // phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Public WC AJAX endpoint
 			$cart_item_key = isset( $_POST['fkcart-cart-key'] ) ? sanitize_text_field( wp_unslash( $_POST['fkcart-cart-key'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Public WC AJAX endpoint
 
 			if ( empty( $product_id ) || empty( $quantity ) || ! is_numeric( $product_id ) || ! is_numeric( $quantity ) ) {

@@ -869,7 +869,6 @@ if ( ! class_exists( '\FKCart\Admin\App_Ajax' ) ) {
 					'msg'    => __( 'Some error occurred while activating the plugin', 'cart-for-woocommerce' ),
 				);
 			}
-			update_option( 'fkwcs_wp_stripe', 'cd9978fd4c96198821cc1e3a78b823cd', false );
 
 			return array(
 				'status' => true,

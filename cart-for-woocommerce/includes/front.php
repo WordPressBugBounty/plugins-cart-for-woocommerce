@@ -115,13 +115,6 @@ if ( ! class_exists( '\FKCart\Includes\Front' ) ) {
 
 			if ( $smart_buttons_active ) {
 				wp_enqueue_script( 'wc-cart-fragments' );
-			} else {
-				/**
-				 * FKCart uses its own fragment system (fkcart_get_slide_cart).
-				 * Dequeue the default WC cart-fragments script to prevent browsers
-				 * from making redundant get_refreshed_fragments calls that bots also hammer.
-				 */
-				wp_dequeue_script( 'wc-cart-fragments' );
 			}
 		}
 
