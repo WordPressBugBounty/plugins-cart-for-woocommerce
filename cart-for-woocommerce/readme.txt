@@ -2,7 +2,7 @@
 Contributors: xlplugins, amans2k
 Tags: WooCommerce Cart, Side Cart, Modern Cart, Floating Cart, WooCommerce Checkout
 Requires at least: 5.0
-Tested up to: 7.0.0
+Tested up to: 7.0.4
 Requires PHP: 7.0
 Stable tag: 1.9.1.2
 License: GPLv3
